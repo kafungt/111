@@ -6,11 +6,11 @@ execute:
   echo: true
 
 book:
-  title: "YOUR PROJECT TITLE"
+  title: "Hepatitis A"
   author:
-    - AUTHOR1 (UNI1)
-    - AUTHOR2 (UNI2)
-  repo-url: https://github.com/YOUR_GITHUB_ACCOUNT/REPO_NAME
+    - Ka Fung Tjin (kt3013)
+    - Shaohui Lang (sl5636)
+  repo-url: https://github.com/kafungt/Hepatitis
   date: today
   page-footer:
     right: |
