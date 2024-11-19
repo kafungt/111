@@ -6,7 +6,7 @@ execute:
   echo: true
 
 book:
-  title: "Hepatitis A1"
+  title: "Hepatitis A"
   author:
     - Ka Fung Tjin (kt3013)
     - Shaohui Lang (sl5636)
