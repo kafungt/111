@@ -1,1 +1,3 @@
 # Introduction
+
+Hepatitis A, a viral liver infection, poses a significant public health challenge within the United States. Its effects can be severe in adults, leading to increased mortality. This project aims to analyze the demographic, health, and lifestyle characteristics of individuals exposed to Hepatitis A using data from the National Health and Nutrition Examination Survey (NHANES) for 2021–2023. By combining demographic (DEMO_L), body measurement (BMX_L), and Hepatitis A antibody status (HEPA_L) datasets, this study will address critical questions regarding the demographic factors, lifestyle patterns, and socioeconomic differences associated with Hepatitis A exposure.
