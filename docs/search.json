@@ -8,13 +8,27 @@
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
+
   },
   {
     "objectID": "data.html",
     "href": "data.html",
     "title": "2  Data",
     "section": "",
-    "text": "2.1 Description",
+    "text": "2.1 Description\nWe decided to use 3 datasets from the Centers for Disease Control and Prevention website (https://wwwn.cdc.gov/nchs/nhanes/search/datapage.aspx?Component=Demographics&Cycle=2021-2023). The data were collected by National Health and Nutrition Examination Survey (NHANES) from Aug 2021 to Aug 2023. The 3 datasets are: Demographic Variables and Sample Weights dataset from Demographics data, Body Measures dataset from Examination Data, and Hepatitis A dataset from Laboratory Data. All 3 datasets were published in Sep 2024 and can be found on the Centers for Disease Control and Prevention website. We will join the 3 datasets together for our project.\nThe specific information for the 3 datasets are the following:",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data</span>"
+    ]
+
+  },
+  {
+    "objectID": "data.html",
+    "href": "data.html",
+    "title": "2  Data",
+    "section": "",
+
+    "text": "2.1.0.1 Demographic Variables and Sample Weights dataset\nlink to data description file: https://wwwn.cdc.gov/Nchs/Nhanes/2021-2022/DEMO_L.htm\nfile type: XPT file\ndata introduction: dimensions:\nfeatures:\npotential problems:\n\n\n2.1.0.2 Body Measures dataset\nlink to data description file: https://wwwn.cdc.gov/Nchs/Nhanes/2021-2022/BMX_L.htm\nfile type: XPT file\ndata introduction:\ndimensions:\nfeatures:\npotential problems:\n\n\n2.1.0.3 Hepatitis A dataset\nlink to data description file: https://wwwn.cdc.gov/Nchs/Nhanes/2021-2022/HEPA_L.htm\nfile type: XPT file\ndata introduction:\ndimensions:\nfeatures:\npotential problems:",
+
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data</span>"
     ]
