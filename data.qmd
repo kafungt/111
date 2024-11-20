@@ -42,12 +42,59 @@ data introduction: Testing information in a representative sample of US populati
 
 dimensions: 8611 rows, 3 columns
 
+
 features: Respondent sequence number, Phlebotomy 2 Year Weight, Hepatitis A antibody
+
 
 
 ## Missing value analysis
 
+```{r}
+library(haven)
+library(tidyverse)
+demo_data <- read_xpt("DEMO_L.XPT")
+bmx_data <- read_xpt("BMX_L.XPT")
+hep_data <- read_xpt("HEPA_L.XPT")
+combined_data <- hep_data |> left_join(bmx_data, by = "SEQN") |> left_join(demo_data, by = "SEQN")
+missing_per_column <- colSums(is.na(combined_data))
 
 
+missing_summary <- data.frame(
+  Variable = names(missing_per_column),
+  MissingValues = missing_per_column
+)
+
+missing_summary$MissingPercentage <- (missing_summary$MissingValues / nrow(combined_data)) * 100
+missing_summary <- missing_summary |>  arrange(desc(MissingPercentage))
+
+top_missing <- missing_summary %>% top_n(30, MissingPercentage)
+
+
+ggplot(top_missing, aes(x = reorder(Variable, -MissingPercentage), y = MissingPercentage)) +
+  geom_bar(stat = "identity", fill = "steelblue") +
+  coord_flip() +
+  labs(title = "Top 30 Variables by Missing Data Percentage",
+       x = "Variable",
+       y = "Missing Percentage") +
+  theme_minimal() +
+  theme(
+    axis.text.y = element_text(size = 10),
+    axis.text.x = element_text(size = 10),
+    plot.title = element_text(hjust = 0.5, size = 14),
+    axis.title = element_text(size = 12),
+    panel.grid.major.y = element_blank()
+  )
+
+```
+
+
+```{r}
+library(visdat)
+
+vis_miss(combined_data) +
+  labs(title = "Missing Data Visualization",
+       x = "Variables",
+       y = "Observations") + theme(axis.text.x = element_text(angle = 90))
+```
 
 
