@@ -4,11 +4,10 @@
     "href": "index.html",
     "title": "Hepatitis A",
     "section": "",
-    "text": "1 Introduction",
+    "text": "1 Introduction\nHepatitis A, a viral liver infection, poses a significant public health challenge within the United States. Its effects can be severe in adults, leading to increased mortality. This project aims to analyze the demographic and health characteristics of individuals with exposure to Hepatitis A using data from the National Health and Nutrition Examination Survey (NHANES) for 2021–2023. By combining demographic (DEMO_L), body measurement (BMX_L), and Hepatitis A antibody status (HEPA_L) datasets, we will answer important questions regarding the factors associated with Hepatitis A exposure.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
-
   },
   {
     "objectID": "data.html",
@@ -19,16 +18,13 @@
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data</span>"
     ]
-
   },
   {
-    "objectID": "data.html",
-    "href": "data.html",
+    "objectID": "data.html#description",
+    "href": "data.html#description",
     "title": "2  Data",
     "section": "",
-
-    "text": "2.1.0.1 Demographic Variables and Sample Weights dataset\nlink to data description file: https://wwwn.cdc.gov/Nchs/Nhanes/2021-2022/DEMO_L.htm\nfile type: XPT file\ndata introduction: dimensions:\nfeatures:\npotential problems:\n\n\n2.1.0.2 Body Measures dataset\nlink to data description file: https://wwwn.cdc.gov/Nchs/Nhanes/2021-2022/BMX_L.htm\nfile type: XPT file\ndata introduction:\ndimensions:\nfeatures:\npotential problems:\n\n\n2.1.0.3 Hepatitis A dataset\nlink to data description file: https://wwwn.cdc.gov/Nchs/Nhanes/2021-2022/HEPA_L.htm\nfile type: XPT file\ndata introduction:\ndimensions:\nfeatures:\npotential problems:",
-
+    "text": "2.1.0.1 Demographic Variables and Sample Weights dataset\nlink to data description file: https://wwwn.cdc.gov/Nchs/Nhanes/2021-2022/DEMO_L.htm\nfile type: XPT file\ndata introduction:\ndimensions:\nfeatures:\npotential problems:\n\n\n2.1.0.2 Body Measures dataset\nlink to data description file: https://wwwn.cdc.gov/Nchs/Nhanes/2021-2022/BMX_L.htm\nfile type: XPT file\ndata introduction:\ndimensions:\nfeatures:\npotential problems:\n\n\n2.1.0.3 Hepatitis A dataset\nlink to data description file: https://wwwn.cdc.gov/Nchs/Nhanes/2021-2022/HEPA_L.htm\nfile type: XPT file\ndata introduction:\ndimensions:\nfeatures:\npotential problems:",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Data</span>"
     ]
