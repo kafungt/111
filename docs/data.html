@@ -184,28 +184,27 @@ ul.task-list li input[type="checkbox"] {
 <h4 data-number="2.1.0.1" class="anchored" data-anchor-id="demographic-variables-and-sample-weights-dataset"><span class="header-section-number">2.1.0.1</span> Demographic Variables and Sample Weights dataset</h4>
 <p>link to data description file: https://wwwn.cdc.gov/Nchs/Nhanes/2021-2022/DEMO_L.htm</p>
 <p>file type: XPT file</p>
-<p>data introduction:</p>
-<p>dimensions:</p>
-<p>features:</p>
-<p>potential problems:</p>
+<p>data introduction: Demographic households information by interviews and examination procedures.</p>
+<p>dimensions: 11933 rows, 27 columns</p>
+<p>features: Respondent sequence number, Data release cycle, Interview examination status, Gender, Age in years at screening, Age in months at screening - 0 to 24 mos, Race/Hispanic origin, Race/Hispanic origin w/ NH Asian, Six-month time period, Age in months at exam - 0 to 19 years, Served active duty in US Armed Forces, Country of birth, Length of time in US, Education level - Adults 20+, Marital status, Pregnancy status at exam, Total number of people in the Household, HH ref person’s gender, HH ref person’s age in years, HH ref person’s education level, HH ref person’s marital status, HH ref person’s spouse’s education level, Full sample 2-year interview weight, Full sample 2-year MEC exam weight, Masked variance pseudo-stratum, Masked variance pseudo-PSU, Ratio of family income to poverty</p>
+<p>potential problems: some of the feature may hold similar information, some features may be useless, which all need to be taken care of.</p>
 </section>
 <section id="body-measures-dataset" class="level4" data-number="2.1.0.2">
 <h4 data-number="2.1.0.2" class="anchored" data-anchor-id="body-measures-dataset"><span class="header-section-number">2.1.0.2</span> Body Measures dataset</h4>
 <p>link to data description file: https://wwwn.cdc.gov/Nchs/Nhanes/2021-2022/BMX_L.htm</p>
 <p>file type: XPT file</p>
-<p>data introduction:</p>
-<p>dimensions:</p>
-<p>features:</p>
-<p>potential problems:</p>
+<p>data introduction: Body measures information by examinations to relate between body weights and health conditions in US population.</p>
+<p>dimensions: 8860 rows, 22 columns</p>
+<p>features: Respondent sequence number, Body Measures Component Status Code, Weight (kg), Weight Comment, Recumbent Length (cm), Recumbent Length Comment, Head Circumference (cm), Head Circumference Comment, Standing Height (cm), Standing Height Comment, Body Mass Index (kg/m**2), BMI Category - Children/Youth, Upper Leg Length (cm), Upper Leg Length Comment, Upper Arm Length (cm), Upper Arm Length Comment, Arm Circumference (cm), Arm Circumference Comment, Waist Circumference (cm), Waist Circumference Comment, Hip Circumference (cm), Hip Circumference Comment</p>
+<p>potential problems: contains many comments feature which may not be useful; some of the features are only present in younger population, which also need some data engineering to handle this problem</p>
 </section>
 <section id="hepatitis-a-dataset" class="level4" data-number="2.1.0.3">
 <h4 data-number="2.1.0.3" class="anchored" data-anchor-id="hepatitis-a-dataset"><span class="header-section-number">2.1.0.3</span> Hepatitis A dataset</h4>
 <p>link to data description file: https://wwwn.cdc.gov/Nchs/Nhanes/2021-2022/HEPA_L.htm</p>
 <p>file type: XPT file</p>
-<p>data introduction:</p>
-<p>dimensions:</p>
-<p>features:</p>
-<p>potential problems:</p>
+<p>data introduction: Testing information in a representative sample of US population for Hepatitis prevalence estimations and prevention.</p>
+<p>dimensions: 8611 rows, 3 columns</p>
+<p>features: Respondent sequence number, Phlebotomy 2 Year Weight, Hepatitis A antibody</p>
 </section>
 </section>
 <section id="missing-value-analysis" class="level2" data-number="2.2">
