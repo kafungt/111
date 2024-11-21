@@ -48,53 +48,33 @@ features: Respondent sequence number, Phlebotomy 2 Year Weight, Hepatitis A anti
 
 
 ## Missing value analysis
-
+We first import the xpt data files
 ```{r}
 library(haven)
 library(tidyverse)
-demo_data <- read_xpt("DEMO_L.XPT")
-bmx_data <- read_xpt("BMX_L.XPT")
-hep_data <- read_xpt("HEPA_L.XPT")
+library(naniar)
+demo_data <- read_xpt("data/DEMO_L.XPT")
+bmx_data <- read_xpt("data/BMX_L.XPT")
+hep_data <- read_xpt("data/HEPA_L.XPT")
 combined_data <- hep_data |> left_join(bmx_data, by = "SEQN") |> left_join(demo_data, by = "SEQN")
-missing_per_column <- colSums(is.na(combined_data))
-
-
-missing_summary <- data.frame(
-  Variable = names(missing_per_column),
-  MissingValues = missing_per_column
-)
-
-missing_summary$MissingPercentage <- (missing_summary$MissingValues / nrow(combined_data)) * 100
-missing_summary <- missing_summary |>  arrange(desc(MissingPercentage))
-
-top_missing <- missing_summary %>% top_n(30, MissingPercentage)
-
-
-ggplot(top_missing, aes(x = reorder(Variable, -MissingPercentage), y = MissingPercentage)) +
-  geom_bar(stat = "identity", fill = "steelblue") +
-  coord_flip() +
-  labs(title = "Top 30 Variables by Missing Data Percentage",
-       x = "Variable",
-       y = "Missing Percentage") +
-  theme_minimal() +
-  theme(
-    axis.text.y = element_text(size = 10),
-    axis.text.x = element_text(size = 10),
-    plot.title = element_text(hjust = 0.5, size = 14),
-    axis.title = element_text(size = 12),
-    panel.grid.major.y = element_blank()
-  )
-
 ```
+
+To visualize missing values, we can make 2 graphs showing number and percentage of missing values for each features respectively.
+```{r}
+gg_miss_var(combined_data) +
+  labs(title = "Number of Missing Data Visualization") +
+  theme(axis.text.y = element_text(size = 5.5))
+```
+From this graph, we can see that the variables with most missing values (BMXHEAD, BMIHEAD) have more than 8000 missing values, which means that almost the entire feature could be missing. On the other hand, there are also features with extremely low number of missing values like WTPH2YR, WTMEC2YR, etc. Almost no missing values within those variables. However, we also need another graph to see the percentage of missing values in each of the variables.
 
 
 ```{r}
 library(visdat)
 
-vis_miss(combined_data) +
-  labs(title = "Missing Data Visualization",
+vis_miss(combined_data, sort_miss = TRUE) +
+  labs(title = "Percentage Missing Data Visualization",
        x = "Variables",
-       y = "Observations") + theme(axis.text.x = element_text(angle = 90))
+       y = "Observations") + 
+  theme(axis.text.x = element_text(angle = 90, size = 7.5))
 ```
-
-
+The **vis_miss** graph can show us the percentage of missing values both in each feature and in the entire dataset, as well as which observation is missing. From the graph, we can see that there are 4 features that are entirely missing, and 16 features with no missing values. On the scope of the entire dataset, there are 40.% of missing values in total.
